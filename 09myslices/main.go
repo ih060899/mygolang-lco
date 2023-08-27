@@ -2,20 +2,19 @@ package main
 
 import (
 	"fmt"
-	"sort"
 )
 
 func main() {
 	fmt.Println("Welcome to video on slices")
 
 	var fruitList = []string{"Apple", "Tomato", "Peach"}
-	fmt.Printf("Type of fruitlist is %T\n", fruitList)
+	//fmt.Printf("Type of fruitlist is %T\n", fruitList)
 
 	fruitList = append(fruitList, "Mango", "Banana")
-	fmt.Println(fruitList)
+	//fmt.Println(fruitList)
 
 	fruitList = append(fruitList[:3])
-	fmt.Println(fruitList)
+	//fmt.Println(fruitList)
 
 	highScores := make([]int, 4)
 
@@ -26,9 +25,17 @@ func main() {
 	//highScores[4] = 777
 
 	highScores = append(highScores, 555, 666, 321)
-	fmt.Println(highScores)
-	fmt.Println(sort.IntsAreSorted(highScores))
-	sort.Ints(highScores)
-	fmt.Println(highScores)
-	fmt.Println(sort.IntsAreSorted(highScores))
+	//fmt.Println(highScores)
+	//fmt.Println(sort.IntsAreSorted(highScores))
+	//sort.Ints(highScores)
+	//fmt.Println(highScores)
+	//fmt.Println(sort.IntsAreSorted(highScores))
+
+	// how to remove a value from slices based on index
+
+	var courses = []string{"reactjs", "javascript", "swift", "python", "ruby"}
+	fmt.Println(courses)
+	index := 2
+	courses = append(courses[:index], courses[index+1:]...)
+	fmt.Println(courses)
 }
