@@ -20,3 +20,24 @@
 
 # Go workspace file
 go.work
+
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Environment variables (if you use a .env file)
+.env
+
+# Editor and IDE files
+.vscode/
+.idea/
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# Configuration files that may contain sensitive information
+config.json
